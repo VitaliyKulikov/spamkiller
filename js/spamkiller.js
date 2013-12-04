@@ -1,18 +1,12 @@
 var spammers = [];
 
-document.body.appendChild(document.createElement("spammers"));
-
 var xhr = new XMLHttpRequest();
 xhr.onreadystatechange = function() {
 	if (xhr.readyState == 4) {
 		spammers = xhr.responseText;
 	}
 };
-xhr
-		.open(
-				"GET",
-				"https://raw.github.com/VitaliyKulikov/spamkiller/master/spammers.json",
-				true);
+xhr.open("GET",	"https://raw.github.com/VitaliyKulikov/spamkiller/master/spammers.json", true);
 xhr.send();
 
 document.addEventListener("DOMSubtreeModified", function(event) {
