@@ -15,13 +15,15 @@
              "128": "img/icon128.png" },
   
   "permissions": [
-    "https://twitter.com/"
+    "https://twitter.com/",
+    "https://raw.github.com/"
   ],
   
   "content_scripts": [
     {
       "matches": ["https://twitter.com/*"],      
-      "js": ["js/spamkiller.js"]
+      "js": ["js/spamkiller.js"],
+      "css": ["css/spamkiller.css"]
     }
   ]
 }
